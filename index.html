@@ -1,143 +1,117 @@
-<!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-<meta charset="utf-8" />
-<title>Назва сайту</title>
-</head>
-<body>
-<!--Створюємо таблицю контейнер, який задамо наступне оформлення:
-border="4" - рамка навколо контейнера. Збільшивши число, можна збільшити товщину рамки.
-align="center" - розміщуємо контейнер по центру екрану.
-rules="rows" - прибираємо подвійну рамку.
-style="width:60%;" - додаємо стильове властивості, що робить контейнер і весь сайт "гумовим".
-Зробити повноцінний адаптивний дизайн, цим способом неможливо.-->
-<table
-border="1"
-align="center"
-rules="rows"
-style="width:60%;">
-<!--Створюємо рядок-->
-<tr>
-<!--Створюємо комірку рядка-->
-<td>
+ 
+ <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+ document.write(unescape("%3Cscript src='/js/jquery-1.6.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+ 
+<meta charset="utf-8">
+<title>ЗЗСО№10 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<?$META_DESCRIPTION$?>
+<?$META_KEYWORDS$?>
+<script type="text/javascript">
+ var browser = navigator.userAgent;
+ var browserRegex = /(Android|BlackBerry|IEMobile|Nokia|iP(ad|hone|od)|Opera M(obi|ini))/;
+ var isMobile = false;
+ if(browser.match(browserRegex)) {
+ isMobile = true;
+ addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+ function hideURLbar(){
+ window.scrollTo(0,1);
+ }
+ }
+</script>
+<link type="text/css" rel="stylesheet" href="/_st/my.css" />
+<script type="text/javascript">
+var navTitle = 'Navigation';
+</script>
+ 
+ <link rel="stylesheet" href="/.s/src/base.min.css" />
+ <link rel="stylesheet" href="/.s/src/layer7.min.css" />
+ <script src="/.s/src/jquery-1.12.4.min.js"></script>
+ 
+ <script src="/.s/src/uwnd.min.js"></script>
+ <script src="//s48.ucoz.net/cgi/uutils.fcg?a=uSD&ca=2&ug=999&isp=1&r=0.874702949676763"></script>
+<script>/
 
+</head>
+ 
+ 
+ 
+<body class="page-body">
+$ADMIN_BAR$
+$GLOBAL_AHEADER$
+ 
+ 
+ 
+ 
+ 
+<!-- <global_promo> -->
+<?if($URI_ID$='page1')?>
+<section>
+<div class="wrapper">
+ <div id="promo">
+ <div class="promo-img">
+ <div id="uncheader" class="$UHEADER_CLASS$">
+ <div id="uCozHeaderMain" style="background:url(/uCozHeader.png) 50% 50% no-repeat;"></div>
+ </div>
+ </div>
+ <div class="promo-caption">
+ <div class="promo-i">
+ <div class="promo-b">
+ <div class="promo-title">
+ Заклад загальної середньої освіти <br> І-ІІІ ступенів №10</br>
+ </div>
+ 
+ <div class="promo-text">
+Торецької міської ВЦА Бахмутського району Донецької області.
  
 
-<!--ШАПКА САЙТУ-->
+ 
+ 
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+</section>
+<?endif?>
+<!-- </global_promo> -->
+<div id="casing">
+ <div class="wrapper">
+ 
+ <!-- <middle> -->
+ <div id="content">
+ <div id="cont-i">
+ <!-- <body> -->$CONTENT$<!--</body> -->
+ </div>
+ </div>
+ <aside>
+ <div id="sidebar"> 
+ <div class="sidebox">
+ <div class="inner">
+ <div style="text-align:center;"><?if($USERS_ON$)?><?if($USER_LOGGED_IN$)?><span><!--<s5212>-->Вітаю Вас<!--</s>-->, <a href="$PERSONAL_PAGE_LINK$"><b>$USERNAME$</b></a>!</span><?else?><span><!--<s5212>-->Вітаю Вас<!--</s>-->, <b>$USERNAME$</b>!</span><?endif?><br><?endif?>
+ <?if($USERS_ON$)?><?if($USER_LOGGED_IN$)?><a title="Мій профіль" href="$PERSONAL_PAGE_LINK$"><!--<s5214>-->Мій профіль<!--</s>--></a> | <a title="Вихід" href="$LOGOUT_LINK$"><!--<s5164>-->Вихід<!--</s>--></a><?else?><a title="Реєстрація" href="$REGISTER_LINK$"><!--<s3089>-->Реєстрація<!--</s>--></a> | <a title="Вхід" href="$LOGIN_LINK$"><!--<s3087>-->Вхід<!--</s>--></a><?endif?><?endif?></div>
+ </div>
+ <div class="clr"></div>
+ </div>
+ $GLOBAL_CLEFTER$
+ </div>
+ </aside>
+ <!-- </middle> -->
+ <div class="clr"></div>
+ <?if($MODULE_ID$='forum')?></div><?endif?>
+ </div>
+</div>
+$GLOBAL_BFOOTER$
+<script type="text/javascript" src="/.s/t/2012/template.min.js"></script>
+ 
+<div style="display:none">
 
-<!--В комірки рядка створюємо ще одну таблицю для шапки сайту. Оформлення:
-border="1" - подвійна рамка товщиною в 1px
-background="images/моя картинка.png" - картинка в шапці сайту, якщо потрібно. Адресу картинки ви повинні вставити свою.
-bgcolor="#7FFFD4" - фоновий колір в шапці, якщо немає картинки.
-cellpadding="10" - відступ вмісту від рамки не менше 10px.
-style="width:100%; border-radius:5px;" - додаємо "гумовість" і закруглюємо куточки рамки-->
-<table
-border="1"
-background="images/моя картинка.png"
-bgcolor="#7FFFD4"
-cellpadding="10"
-style="width:100%; border-radius:5px;">
-<!--Створюємо рядок таблиці-->
-<tr>
-<!--Створюємо стовпець таблиці-->
-<th>
-<!-- Зміст комірки стовпця-->
-<h1>Назва сайту (організації)</h1>
-<h3>Опис сайту</h3>
-<!--Закриваємо таблицю-->
-</th>
-</tr>
-</table>
-
-<!--ОСНОВНИЙ КОНТЕНТ-->
-
-<!-- У цій же комірці контейнера створюємо ще одну таблицю для основного контенту. Оформлення як і в попередній таблиці-->
-
-<table
-border="1"
-bgcolor="#e6e6fa"
-cellpadding="10"
-style="width:100%; border-radius:5px;">
-<!-- Створюємо рядок-->
-<tr>
-<!-- Створюємо комірку. Оформлення: rowspan= " 2 " - об'єднуємо дві комірки в одну. Число об'єднуються в комірки по числу комірок в сайдбаре. style= "width: 80%" - основний контент займає 80% всієї площі, решта 20% для сайдбара-->
-<td
-rowspan="2"
-style="width:80%">
-<h2>Сторінка</h2>
-<!-- Починаємо абзац з червоного рядка-->
-<p style="text-indent:20px">
-Привіт шановні майбутні веб-майстри! Я рада вітати Вас на своєму сайті. Цей сайт не перший, який я розробила самостійно,
-а до цього вмів тільки входити в інтернет..</p>
-
-<p style="text-indent:20px">Чому я вирішила це зробити? За той час ( а це місяці), поки розбирався в сайтобудування і створювала цей ресурс виявилося, що автори посібників зі створення сайтів вважають багато нюансів самі по собі зрозумілі і не звертають на них увагу.
-А мені, з огляду на вік і «досвід», було не просто зрозуміти як раз ці нюанси, вони забирали найбільше часу.</p>
-<!--Закриваємо комірка-->
-</td>
-
-<!--САЙДБАР-->
-
-<!--Створюємо комірку сайдбара-->
-<td bgcolor="#e6e6fa">
-<h3>Меню</h3>
-<!--Абзац для посилання на сторінку сайту-->
-<p>
-<!--Посилання на сторінку сайту-->
-<a href="">
-<!--Картинка маркера перед назвою сторінки-->
-<img src="http://trueimages.ru/img/00/06/f4fffdb5.png">
-<!-Назва сторінки
-style="margin-left:5px;" - відступ назви від маркера-->
-<span style="margin-left:5px;">Сторінка</span></a>
-<!--Закриваємо абзац-->
-</p>
-<p>
-<a href="">
-<img src="http://trueimages.ru/img/31/ab/4dcb087c2ae4305edcd15171696.jpg">
-<span style="margin-left:5px;">Сторінка 1</span;></a>
-</p>
-<p>
-<a href="">
-<img src="http://trueimages.ru/img/31/ab/4dcb087c2ae4305edcd15171696.jpg">
-<span style="margin-left:5px;">Сторінка 2</span></a>
-</p>
-<!--Закриваємо рядок Меню-->
-</td>
-</tr>
-<!-- Створюємо рядок з додатковою інформацією-->
-<tr>
-<!-- Комірка з додатковою інформацією-->
-<td
-bgcolor="#e6e6fa"
-align="center">
-<h3>Загальна інформація</h3>
-<p>Текст загальної інформації або реклама</p>
-<!--Закриваємо осередок із загальною інформацією і таблицю основного контенту-->
-</td>
-</tr>
-</table>
-
-<!--ПІДВАЛ-->
-
-<!-- Створюємо таблицю підвалу-->
-<table
-border="1"
-bgcolor="#7FFFD4"
-height="100"
-cellpadding="10"
-style="width:100%; border-radius:5px;">
-<!-- Створюємо рядок.-->
-<tr>
-<!-- Створюємо стовбець.-->
-<th>
-<h3>Підвал</h3>
-<!-- Закриваємо таблицю підвалу. При бажанні в підвалі можна зробити кілька рядків і стовпців-->
-</th>
-</tr>
-</table>
-<!-- Закриваємо таблицю контейнера-->
-</td>
-</tr>
-</table>
+</div>
 </body>
 </html>
